@@ -1,1 +1,1 @@
-# git_bash-github-
+# Работа с git и bash  
