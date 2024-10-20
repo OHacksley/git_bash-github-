@@ -1,0 +1,112 @@
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~ (main)
+$ cd ~
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~ (main)
+$ mkdir test3
+mkdir: cannot create directory ‘test3’: File exists
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~ (main)
+$ mkdir test3
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~ (main)
+$ cd test3
+echo "row1" > 4
+echo "row2" >> 4
+echo "row3" >> 4
+echo "row4" >> 4
+echo "row1" > 5
+echo "row2" >> 5
+echo "row3" >> 5
+echo "row4" >> 5
+echo "row1" > 6
+echo "row2" >> 6
+echo "row3" >> 6
+echo "row4" >> 6
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~/test3 (main)
+$ grep "row2" 5
+row2
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~/test3 (main)
+$ grep "row" *
+4:row1
+4:row2
+4:row3
+4:row4
+5:row1
+5:row2
+5:row3
+5:row4
+6:row1
+6:row2
+6:row3
+6:row4
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~/test3 (main)
+$ grep "row" 6 | wc -l
+4
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~/test3 (main)
+$ find . -name 5
+./5
+
+
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~/test3 (main)
+$ find . -name 5 -delete
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~/test3 (main)
+$ echo "test" >> 4
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~/test3 (main)
+$ sed -i 's/test/fail/g' 4
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~/test3 (main)
+$ echo "test" >> 4
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~/test3 (main)
+$ ps aux
+      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+      305     304     305       6268  pty0      197609 19:27:10 /usr/bin/bash
+      304       1     304      10712  ?         197609 19:27:10 /usr/bin/mintty
+      462     305     462       2836  pty0      197609 19:52:10 /usr/bin/ps
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~/test3 (main)
+$ kill 666
+bash: kill: (666) - No such process
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~/test3 (main)
+$ ping rusau.net
+
+Pinging rusau.net [5.181.161.75] with 32 bytes of data:
+Reply from 5.181.161.75: bytes=32 time=49ms TTL=51
+Reply from 5.181.161.75: bytes=32 time=57ms TTL=52
+Reply from 5.181.161.75: bytes=32 time=69ms TTL=50
+Reply from 5.181.161.75: bytes=32 time=68ms TTL=48
+
+Ping statistics for 5.181.161.75:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 49ms, Maximum = 69ms, Average = 60ms
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~/test3 (main)
+$ ping -c 5 rusau.net
+Access denied. Option -c requires administrative privileges.
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~/test3 (main)
+$ ping -c 5 rusau.net
+Access denied. Option -c requires administrative privileges.
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~/test3 (main)
+$ curl https://petstore.swagger.io/v2/pet/findByStatus?status=available,pending
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+curl: (35) schannel: next InitializeSecurityContext failed: CRYPT_E_NO_REVOCATION_CHECK (0x80092012) - ▒▒▒▒▒▒▒ ▒▒▒▒▒▒ ▒▒ ▒▒▒▒▒▒ ▒▒▒▒▒▒▒▒▒▒ ▒▒▒▒▒▒▒▒ ▒▒▒▒▒▒ ▒▒▒ ▒▒▒▒▒▒▒▒▒▒▒.
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~/test3 (main)
+$ curl -X POST -H "Content-type: application/json" -d '{"id": 12345, "username": "newuser", "firstName": "John", "lastName": "Doe", "email": "newuser@example.com", "password": "password", "phone": "1234567890", "userStatus": 1}' https://petstore.swagger.io/v2/user
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+

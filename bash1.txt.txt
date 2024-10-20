@@ -1,0 +1,120 @@
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~ (main)
+$ touch bash1.txt
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~ (main)
+$ cd ~
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~ (main)
+$ pwd
+/c/Users/zavmv
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~ (main)
+$ mkdir test1
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~ (main)
+$ cd test1
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~/test1 (main)
+$ touch 1 2
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~/test1 (main)
+$ touch 3
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~/test1 (main)
+$ ls
+1  2  3
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~/test1 (main)
+$ cd..
+bash: cd..: command not found
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~/test1 (main)
+$ cd
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~ (main)
+$ mkdir test2
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~ (main)
+$ cd test1
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~/test1 (main)
+$ rm 2
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~/test1 (main)
+$ cd
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~ (main)
+$ mkdir test3
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~ (main)
+$ cd test3
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~/test3 (main)
+$ touch file1 file2
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~/test3 (main)
+$ cd
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~ (main)
+$ rmdir test3
+rmdir: failed to remove 'test3': Directory not empty
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~ (main)
+$ mkdir test4
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~ (main)
+$ mv test1/1 test4/
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~ (main)
+$ mv test1/3 test4/
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~ (main)
+$ cd test4
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~/test4 (main)
+$ echo "line">> 1
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~/test4 (main)
+$ echo "line">> 1
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~/test4 (main)
+$ echo "line">> 1
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~/test4 (main)
+$ cat 1
+line
+line
+line
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~/test4 (main)
+$ cd
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~ (main)
+$ cd test4
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~/test4 (main)
+$ echo "line">>3
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~/test4 (main)
+$ echo "line">>3
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~/test4 (main)
+$ echo "line">>3
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~/test4 (main)
+$ cat 1 3
+line
+line
+line
+line
+line
+line
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~/test4 (main)
+$ nano 1
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~/test4 (main)
+$ cd
+
+zavmv@LAPTOP-BKSEJ6LA MINGW64 ~ (main)
+$ cat bash1.txt
